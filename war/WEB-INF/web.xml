@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>technologyBusiness.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+    
+	<!-- url for the login page. -->
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>technologyBusiness.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Login</web-resource-name>
+        <url-pattern>/login</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url for the dashboard page. -->
+	<servlet>
+		<servlet-name>Dashboard</servlet-name>
+		<servlet-class>technologyBusiness.DashboardServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dashboard</servlet-name>
+		<url-pattern>/dashboard</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Dashboard</web-resource-name>
+        <url-pattern>/dashboard</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+    <!-- URL for the formCreation page. -->
+    <servlet>
+        <servlet-name>CreateForm</servlet-name>
+        <servlet-class>technologyBusiness.CreateFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateForm</servlet-name>
+        <url-pattern>/formCreation</url-pattern>
+    </servlet-mapping>
+    <security-constraint>
+      <web-resource-collection>
+        <web-resource-name>CreateForm</web-resource-name>
+        <url-pattern>/formCreation</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url for the employees page. -->
+	<servlet>
+		<servlet-name>Employees</servlet-name>
+		<servlet-class>technologyBusiness.EmployeesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Employees</servlet-name>
+		<url-pattern>/employees</url-pattern>
+	</servlet-mapping>
+		<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Employees</web-resource-name>
+        <url-pattern>/employees</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url for the businesses page. -->
+	<servlet>
+		<servlet-name>Businesses</servlet-name>
+		<servlet-class>technologyBusiness.BusinessesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Businesses</servlet-name>
+		<url-pattern>/businesses</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Businesses</web-resource-name>
+        <url-pattern>/businesses</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+	
+	<!-- url for the form page. -->
+	<servlet>
+		<servlet-name>Forms</servlet-name>
+		<servlet-class>technologyBusiness.FormsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Forms</servlet-name>
+		<url-pattern>/forms</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Forms</web-resource-name>
+        <url-pattern>/forms</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+	
+	<!-- url for the maps page. -->
+	<servlet>
+		<servlet-name>Maps</servlet-name>
+		<servlet-class>technologyBusiness.MapsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Maps</servlet-name>
+		<url-pattern>/maps</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- url for the maps page. -->
+	<servlet>
+		<servlet-name>Help</servlet-name>
+		<servlet-class>technologyBusiness.HelpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Help</servlet-name>
+		<url-pattern>/help</url-pattern>
+	</servlet-mapping>
+	
+	<!-- url for the maps page. -->
+	<servlet>
+		<servlet-name>Contact</servlet-name>
+		<servlet-class>technologyBusiness.ContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Contact</servlet-name>
+		<url-pattern>/contact</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- url for the maps page. -->
+	<servlet>
+		<servlet-name>About</servlet-name>
+		<servlet-class>technologyBusiness.AboutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>About</servlet-name>
+		<url-pattern>/about</url-pattern>
+	</servlet-mapping>
+	
+	<!-- url for the maps page. -->
+	<servlet>
+		<servlet-name>Suggestion</servlet-name>
+		<servlet-class>technologyBusiness.SuggestionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Suggestion</servlet-name>
+		<url-pattern>/suggestion</url-pattern>
+	</servlet-mapping>
+	
+	<!-- url to create a new business page. -->
+	<servlet>
+		<servlet-name>BusinessGeoLocation</servlet-name>
+		<servlet-class>technologyBusiness.BusinessGeoLocationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BusinessGeoLocation</servlet-name>
+		<url-pattern>/previewform</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>BusinessGeoLocation</web-resource-name>
+        <url-pattern>/previewform</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url to create a new business page. -->
+	<servlet>
+		<servlet-name>BusinessPersoInfo</servlet-name>
+		<servlet-class>technologyBusiness.BusinessPersoInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BusinessPersoInfo</servlet-name>
+		<url-pattern>/newBusinessPersoInfo</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>BusinessPersoInfo</web-resource-name>
+        <url-pattern>/newBusinessPersoInfo</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url to create a new business page. -->
+	<servlet>
+		<servlet-name>BusinessProfile</servlet-name>
+		<servlet-class>technologyBusiness.BusinessProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BusinessProfile</servlet-name>
+		<url-pattern>/newBusinessProfile</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>BusinessProfile</web-resource-name>
+        <url-pattern>/newBusinessProfile</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+		<!-- url to create a new employee page. -->
+	<servlet>
+		<servlet-name>EmployeeGeoLocation</servlet-name>
+		<servlet-class>technologyBusiness.EmployeeGeoLocationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeGeoLocation</servlet-name>
+		<url-pattern>/newEmployeeGeoLocation</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>EmployeeGeoLocation</web-resource-name>
+        <url-pattern>/newEmployeeGeoLocation</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url to create a new employee page. -->
+	<servlet>
+		<servlet-name>EmployeePersoInfo</servlet-name>
+		<servlet-class>technologyBusiness.EmployeePersoInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeePersoInfo</servlet-name>
+		<url-pattern>/newEmployeePersoInfo</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>EmployeePersoInfo</web-resource-name>
+        <url-pattern>/newEmployeePersoInfo</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+	
+	<!-- url to create a new business page. -->
+	<servlet>
+		<servlet-name>EmployeeProfile</servlet-name>
+		<servlet-class>technologyBusiness.EmployeeProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeProfile</servlet-name>
+		<url-pattern>/newEmployeeProfile</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>EmployeeProfile</web-resource-name>
+        <url-pattern>/newEmployeeProfile</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+	<!-- url to create a new admin account page. -->
+	<servlet>
+		<servlet-name>NewAccount</servlet-name>
+		<servlet-class>technologyBusiness.NewAccountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewAccount</servlet-name>
+		<url-pattern>/newAccount</url-pattern>
+	</servlet-mapping>	
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>NewAccount</web-resource-name>
+        <url-pattern>/newAccount</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+   
+    
+<!--     this code below is for the url maping of the employees -->
+   
+   
+    <!-- url to create a new admin account page. -->
+	<servlet>
+		<servlet-name>CurrentReport</servlet-name>
+		<servlet-class>technologyBusiness.CurrentReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CurrentReport</servlet-name>
+		<url-pattern>/currentReports</url-pattern>
+	</servlet-mapping>	
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>CurrentReport</web-resource-name>
+        <url-pattern>/currentReports</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+    <!-- url to create a new admin account page. -->
+	<servlet>
+		<servlet-name>PendingReport</servlet-name>
+		<servlet-class>technologyBusiness.PendingReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PendingReport</servlet-name>
+		<url-pattern>/pendingReports</url-pattern>
+	</servlet-mapping>	
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>PendingReport</web-resource-name>
+        <url-pattern>/pendingReports</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+        <!-- url to create a new admin account page. -->
+	<servlet>
+		<servlet-name>Statistic</servlet-name>
+		<servlet-class>technologyBusiness.StatisticServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Statistic</servlet-name>
+		<url-pattern>/report_forms</url-pattern>
+	</servlet-mapping>	
+	<security-constraint>
+      <web-resource-collection>
+        <web-resource-name>Statistic</web-resource-name>
+        <url-pattern>/report_forms</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>*</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+   <!-- THIS CODE IS FOR OBJECTIFY -->
+	<filter>       
+	 	<filter-name>ObjectifyFilter</filter-name>        
+	 	<filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class> 
+	 </filter> 
+	 <filter-mapping>        
+	 	<filter-name>ObjectifyFilter</filter-name>        
+	 	<url-pattern>/*</url-pattern> 
+	 </filter-mapping>
+	
+</web-app>
